@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Snap+ Gratuit 1 an</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fffc00, #ffffff);
+      text-align: center;
+      padding: 50px;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #000;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #step2 {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>🎉 Snap+ Gratuit 1 an à gagner 🎉</h1>
+  <p>Entre tes infos pour participer</p>
+
+  <!-- Étape 1 -->
+  <div id="step1">
+    <input type="text" placeholder="Pseudo Snapchat" required><br>
+    <input type="tel" placeholder="Numéro de téléphone" required><br>
+    <button onclick="nextStep()">Continuer</button>
+  </div>
+
+  <!-- Étape 2 -->
+  <div id="step2">
+    <p>📩 Entre le code de participation reçu</p>
+    <input type="text" placeholder="Code à 6 chiffres" maxlength="6"><br>
+    <button onclick="validateCode()">Valider</button>
+  </div>
+
+  <p style="font-size:12px; margin-top:15px;">
+    ⚠️ Jeu concours non affilié à Snapchat
+  </p>
+</div>
+
+<script>
+  function nextStep() {
+    document.getElementById("step1").style.display = "none";
+    document.getElementById("step2").style.display = "block";
+  }
+
+  function validateCode() {
+    alert("Participation validée ✅");
+  }
+</script>
+
+</body>
+</html>
